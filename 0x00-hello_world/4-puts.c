@@ -2,13 +2,14 @@
 
 /**
  * main - Entry point
- * 
- * Retutn: Always 0 (Success)
+ *
+ * Return: Always 0 (Success)
  */
-int main(void)
+int main (void)
 {
-	char myString[] = "Programming is like building a multilingual puzzle";
-	puts(myString);
+	char myChar[] = "\"Programming is like building a multilingual puzzle";
+
+	puts(myChar);
 
 	return(0);
 }
