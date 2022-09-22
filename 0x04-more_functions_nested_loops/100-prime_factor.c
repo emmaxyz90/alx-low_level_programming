@@ -1,29 +1,42 @@
-#include "holberton.h"
+#include <stdio.h>
 
 /**
-* print_triangle - print a triangle
-*
-* @size: The charater to print
-*/
+ * C program to find all prime factors of a given number
+ */
 
-void print_triangle(int size)
+int main()
 {
-	int row, col;
+    int i, j, num, isPrime;
 
-	if (size > 0)
-	{
-		for (row = 1; row <= size; row++)
-		{
-			for (col = size - row; col > 0; col--)
-				_putchar(' ');
-			
-			for (col = 0; col < row; col++)
-				_putchar('#');
+    /* Input a number from user */
+    int num = 612852475143;
 
-			if (row == size)
-				continue;
-			_putchar('\n');
-		}
-	}
-	_putchar('\n');
+    printf("All Prime Factors of %d are: \n", num);
+
+    /* Find all Prime factors */
+    for(i=2; i<=num; i++)
+    {
+        /* Check 'i' for factor of num */
+        if(num%i==0)
+        {
+            /* Check 'i' for Prime */
+            isPrime = 1;
+            for(j=2; j<=i/2; j++)
+            {
+                if(i%j==0)
+                {
+                    isPrime = 0;
+                    break;
+                }
+            }
+
+            /* If 'i' is Prime number and factor of num */
+            if(isPrime==1)
+            {
+                printf("%d, ", i);
+            }
+        }
+    }
+
+    return 0;
 }
