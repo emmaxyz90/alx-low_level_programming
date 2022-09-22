@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
 *print_square - print square of 2 and 10 with '#'
