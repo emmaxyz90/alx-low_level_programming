@@ -6,12 +6,12 @@
 
 int main()
 {
-    int i, j, num, isPrime;
+    int i, j, isPrime;
 
     /* Input a number from user */
-    int num = 612852475143;
+    long  num = 612852475143;
 
-    printf("All Prime Factors of %d are: \n", num);
+    printf("All Prime Factors of %ld are: \n", num);
 
     /* Find all Prime factors */
     for(i=2; i<=num; i++)
