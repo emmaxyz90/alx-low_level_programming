@@ -1,6 +1,5 @@
 es (24 sloc)  407 Bytes
-
-#include "holberton.h"
+#include "main.h"
 
 /**
 * print_triangle - print a triangle
