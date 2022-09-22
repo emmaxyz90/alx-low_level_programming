@@ -1,23 +1,26 @@
-#include "main.h"
-#include "stdio.h"
-
+#include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
-  */
+* main - Entry point
+*
+* Return: end program
+*/
 int main(void)
 {
-int i;
-long int fibonacci[50], sum = 2;
-fibonacci[0] = 1;
-fibonacci[1] = 2;
-for (i = 2; i < 50; i++)
-{
-fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-if ((fibonacci[i] % 2) == 0 && fibonacci[i] < 4000000)
-sum += fibonacci[i];
-}
-printf("%ld\n", sum);
-return (0);
+	int i = 1;
+	long int  num1 = 0;
+	long int num2 = 1;
+	long int sumPrevTwo = 0;
+	long int sumEven = 0;
+	long int maxFibTerm = 4000000;
+
+	while (num1 < maxFibTerm && num2 < maxFibTerm)
+	{
+		sumPrevTwo = num1 + num2;
+		sumEven += (((sumPrevTwo % 2) == 0) ? sumPrevTwo : 0);
+		num1 = num2;
+		num2 = sumPrevTwo;
+		i++;
+	}
+	printf("%ld\n", sumEven);
+	return (0);
 }
