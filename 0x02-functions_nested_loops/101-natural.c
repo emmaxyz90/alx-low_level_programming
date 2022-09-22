@@ -1,24 +1,25 @@
-#include "main.h"
-#include "stdio.h"
-
+#include <stdio.h>
 /**
- * main - Entry point
- * Return: Always 0 (Success)
- *
- */
-
+* main - main function
+*
+* Return: end program
+*/
 int main(void)
 {
-int i;
-long int fibonacci[50], sum = 2;
-fibonacci[0] = 1;
-fibonacci[1] = 2;
-for (i = 2; i < 50; i++)
-{
-fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-if ((fibonacci[i] % 2) == 0 && fibonacci[i] < 4000000)
-sum += fibonacci[i];
-}
-printf("%ld\n", sum);
-return (0);
+	int n, s = 0;
+
+	for (n = 0; n < 1024; ++n)
+	{
+		if ((n % 3) == 0 || (n % 5) == 0)
+		{
+			s = s + n;
+		}
+		else
+		{
+
+		}
+	}
+	printf("%d\n", s);
+
+	return (0);
 }
