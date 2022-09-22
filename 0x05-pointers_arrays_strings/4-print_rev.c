@@ -1,16 +1,18 @@
 #include "main.h"
 /**
-* print_rev - function
+* _puts - function
 *
-* @s: pointer of parameter
+* @str: pointer of parameter
 */
-void print_rev(char *s)
+void _puts(char *str)
 {
-	int length = 0;
+	int i = 0;
 
-	while (s[length] != '\0')
-		length++;
-	while (length > 0)
-		_putchar(s[--length]);
+	while (str[i] != '\0')
+
+	{
+		_putchar(str[i]);
+		i++;
+	}
 	_putchar(10);
 }
