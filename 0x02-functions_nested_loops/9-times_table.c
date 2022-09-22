@@ -1,38 +1,36 @@
 #include "main.h"
-
 /**
- *
- * times_table - prints the times table of an integer starting with zero
- * Return: Always 0.
- */
-
+* times_table - function to print times table
+*
+* Return: none - void function
+*/
 void times_table(void)
 {
-int x, y, product;
-for (x = 0; x <= 9; x++)
-{
+	int col = 0;
+	int row = 0;
+	int units = 0;
+	int tens = 0;
+	int n = 0;
 
-for (y = 0; y <= 9; y++)
-{
-product = x * y;
-if (y != 0)
-{
-_putchar(',');
-_putchar(' ');
-}
-if (y == 0)
-_putchar('0');
-else if (product >= 10)
-{
-_putchar((product / 10) + '0');
-_putchar((product % 10) + '0');
-}
-else if ((product < 10) && (y != 0))
-{
-_putchar(' ');
-_putchar((product % 10) + '0');
-}
-}
-_putchar('\n');
-}
+	while (row < 10)
+	{
+		while (col < 10)
+		{
+			n = col * row;
+			units = n % 10;
+			tens = (n - units) / 10;
+			if (col > 0)
+			{
+				_putchar(' ');
+				(tens <= 0) ? _putchar(' ') : _putchar(tens + '0');
+			}
+			_putchar(units + '0');
+			if (col < 9)
+				_putchar(44);
+			col++;
+		}
+		col = 0;
+		row++;
+		_putchar(10);
+	}
 }
