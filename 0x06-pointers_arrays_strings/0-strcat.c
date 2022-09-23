@@ -1,14 +1,27 @@
-char* strcat(char *a, char *b) {
-    while (*a++);
-    a--;
-    while (*a++ = *b++);
-    return a;
+#include "main.h"
+/**
+* _strcat - concatenates two strings
+*
+* @dest: string to append to
+* @src: string to add
+*
+* Return: a pointer to the resulting string
+*/
+
+char *_strcat(char *dest, char *src)
+{
+	int x = 0;
+	int y = 0;
+
+	while (dest[x])
+	{
+		x++;
+	}
+	while (src[y])
+	{
+		dest[x] = src[y];
+		x++;
+		y++;
+	}
+	return (dest);
 }
-
-char *str_a = "a string";
-char *str_b = "a long long long string";
-char *str_c = "yet another string";
-char *result;
-
-result = strcat(str_a, str_b);
-result = strcat(result, str_c);
